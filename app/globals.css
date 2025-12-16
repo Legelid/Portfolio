@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+body {
+    @apply bg-blue-800 text-black antialiased;
+}
 
 :root {
   --background: #ffffff;
