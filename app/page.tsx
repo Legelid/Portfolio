@@ -1,4 +1,4 @@
-import AboutPage from "./about/page.tsx";
+import AboutPage from "./about/page";
 
 export default function HomePage() {
     return <AboutPage />;
