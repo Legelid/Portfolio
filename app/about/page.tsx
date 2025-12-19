@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDiscord } from "react-icons/fa";
 import CompanyCarousel from "../../components/CompanyCarousel";
 
+
 export default function AboutPage() {
     return (
         <section className="py-40">
