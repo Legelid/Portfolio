@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
     title: "My Portfolio",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
         <body className="min-h-screen flex flex-col relative">
+        <Analytics />
 
         {/* THE RIPPLE OVERLAY (animation layer) */}
         <div id="theme-ripple" className="pointer-events-none fixed inset-0 z-[999]"></div>
