@@ -25,11 +25,7 @@ export default function AboutPage() {
               dark:bg-purple-900 dark:opacity-40"
                         />
 
-                        <HeroImageCarousel
-                            src="/me.jpg"
-                            alt="Andrew Collins"
-                            className="relative w-52 h-52 md:w-64 md:h-64 rounded-full object-cover shadow-xl"
-                        />
+                        <HeroImageCarousel />
                     </div>
 
                     {/* Social Icons */}
