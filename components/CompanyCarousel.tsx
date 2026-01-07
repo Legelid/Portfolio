@@ -1,11 +1,11 @@
 "use client";
 
 const companies = [
-    { name: "PowerSchool", img: "/logos/powerschool.png", link: "https://www.powerschool.com/" },
-    { name: "Google", img: "/logos/google.jpg", link: "https://www.google.com/" },
+    { name: "PowerSchool", img: "/logos/powerschool.svg", link: "https://www.powerschool.com/" },
+    { name: "Google", img: "/logos/google.svg", link: "https://www.google.com/" },
     { name: "Rhombus", img: "/logos/rhombus.jpeg", link: "https://www.rhombussystems.com/" },
-    { name: "Ubiquiti", img: "/logos/ubiquiti.jpeg", link: "https://ui.com/" },
-    { name: "Proxmox", img: "/logos/proxmox logo.png", link: "https://www.proxmox.com/" },
+    { name: "Ubiquiti", img: "/logos/ubiquiti.svg", link: "https://ui.com/" },
+    { name: "Proxmox", img: "/logos/proxmox.svg", link: "https://www.proxmox.com/" },
 ];
 
 export default function CompanyCarousel() {

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDiscord } from "react-icons/fa";
 import CompanyCarousel from "../../components/CompanyCarousel";
+import HeroImageCarousel from "@/components/HeroImageCarousel";
 
 
 export default function AboutPage() {
@@ -24,7 +25,7 @@ export default function AboutPage() {
               dark:bg-purple-900 dark:opacity-40"
                         />
 
-                        <img
+                        <HeroImageCarousel
                             src="/me.jpg"
                             alt="Andrew Collins"
                             className="relative w-52 h-52 md:w-64 md:h-64 rounded-full object-cover shadow-xl"
