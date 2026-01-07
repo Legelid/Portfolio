@@ -17,7 +17,7 @@ const dailyTools = [
 const devTools = [
     { name: "React", logo: "/logos/React-icon.svg" },
     { name: "Next.js", logo: "/logos/nextjs.svg" },
-    { name: "TypeScript", logo: "/logos/typescript.svg" },
+    { name: "TypeScript", logo: "/logos/Typescript.svg" },
     { name: "Tailwind CSS", logo: "/logos/tailwind.svg" },
     { name: "GitHub", logo: "/logos/github.svg"},
     { name: "Laravel", logo: "/logos/Laravel.svg" },
