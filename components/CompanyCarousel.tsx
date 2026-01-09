@@ -7,7 +7,7 @@ const companies = [
     { name: "Ubiquiti", img: "/logos/ubiquiti.svg", link: "https://ui.com/" },
     { name: "Proxmox", img: "/logos/proxmox.svg", link: "https://www.proxmox.com/" },
     { name: "GitHub", img: "logos/github.svg", link: "https://github.com/"},
-    { name: "Docker", img: "/logos/docker.svg", link: "https://www.docker.com/" },
+    { name: "Docker", img: "/logos/Docker.svg", link: "https://www.docker.com/" },
     { name: "Grafana", img: "/logos/Grafana.svg", link: "https://www.grafana.com/" },
     { name: "Laravel", img: "/logos/Laravel.svg", link: "https://laravel.com/" },
     { name: "Tailwind CSS", img: "/logos/tailwind.svg", link:"https//www.tailwind.com/"},
