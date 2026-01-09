@@ -6,6 +6,14 @@ const companies = [
     { name: "Rhombus", img: "/logos/rhombus.jpeg", link: "https://www.rhombussystems.com/" },
     { name: "Ubiquiti", img: "/logos/ubiquiti.svg", link: "https://ui.com/" },
     { name: "Proxmox", img: "/logos/proxmox.svg", link: "https://www.proxmox.com/" },
+    { name: "GitHub", img: "logos/github.svg", link: "https://github.com/"},
+    { name: "Docker", img: "/logos/docker.svg", link: "https://www.docker.com/" },
+    { name: "Grafana", img: "/logos/Grafana.svg", link: "https://www.grafana.com/" },
+    { name: "Laravel", img: "/logos/Laravel.svg", link: "https://laravel.com/" },
+    { name: "Tailwind CSS", img: "/logos/tailwind.svg", link:"https//www.tailwind.com/"},
+    { name: "Jamf", img: "/logos/jamf.svg", link: "https://www.jamf.com/"},
+    { name: "Linux", img: "/logos/Linux.svg" },
+
 ];
 
 export default function CompanyCarousel() {
@@ -19,10 +27,10 @@ export default function CompanyCarousel() {
                         key={i}
                         href={c.link}
                         target="_blank"
-                        className="inline-flex items-center justify-center bg-white dark:bg-gray-800
+                        className="inline-flex items-center justify-center bg-gray-300 dark:bg-gray-800
                        rounded-xl shadow-md hover:shadow-lg transition-all p-4 min-w-[150px] h-[100px]"
                     >
-                        <img src={c.img} alt={c.name} className="h-full object-contain rounded-xl" />
+                        <img src={c.img} alt={c.name} className="h-full object-contain" />
                     </a>
                 ))}
 
@@ -32,10 +40,10 @@ export default function CompanyCarousel() {
                         key={`dup-${i}`}
                         href={c.link}
                         target="_blank"
-                        className="inline-flex items-center justify-center bg-white dark:bg-gray-800
+                        className="inline-flex items-center justify-center bg-gray-300 dark:bg-gray-800
                        rounded-xl shadow-md hover:shadow-lg transition-all p-4 min-w-[150px] h-[100px]"
                     >
-                        <img src={c.img} alt={c.name} className="h-full object-contain rounded-xl" />
+                        <img src={c.img} alt={c.name} className="h-full object-contain" />
                     </a>
                 ))}
             </div>

@@ -75,13 +75,12 @@ export default function AboutPage() {
                     </h1>
 
                     <p className="mt-10 text-gray-700 dark:text-gray-300 leading-relaxed text-lg max-w-2xl">
-                        Hello! I’m <span className="font-bold text-purple-900 dark:text-purple-400">Andrew</span>,
-                        a passionate Tech Enthusiast who has a love for technology and coding.
-                        I love solving real-world problems, learning new technologies, and continuously improving my craft.
+                        Hi, I’m <span className="font-bold text-purple-900 dark:text-purple-400">Andrew</span>!
+                        I like taking apart digital devices, figuring out how they work, and putting them back together without extra screws (most of the time).
                     </p>
 
                     {/* Button */}
-                    <div className="mt-10">
+                    <div className="mt-16">
                         <a
                             href="/projects"
                             className="
@@ -94,7 +93,15 @@ export default function AboutPage() {
                             View My Projects
                         </a>
                     </div>
-                    <CompanyCarousel />
+
+
+
+                    <div className="mt-32">
+                        <p className="text-sm text-gray-400 text-center mb-4">
+                            Tools & Platforms I’ve Worked With
+                        </p>
+                    </div>
+                        <CompanyCarousel />
                 </motion.div>
             </div>
         </section>

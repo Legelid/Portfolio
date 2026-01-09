@@ -21,11 +21,10 @@ export default function Navbar() {
                     <div
                         className=" flex items-center
                         justify-center w-14 h-14 md:w-24 md:h-18 rounded-xl
-                        bg-white/80 dark:bg-blue-950/60 backdrop-blur shadow-md ring-1 ring-black/10
-                        dark:ring-white/10 transition-transform hover:scale-105"
+                        backdrop-blur transition-transform hover:scale-105"
                     >
                         <Image
-                            src="/andrewlogo1.png"
+                            src="/andrewlogo2.png"
                             alt="Andrew Collins Logo"
                             width={70}
                             height={70}
@@ -57,13 +56,6 @@ export default function Navbar() {
                         className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-300 transition-colors"
                     >
                         Experience
-                    </Link>
-
-                    <Link
-                        href="/hobbies"
-                        className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-300 transition-colors"
-                    >
-                        Hobbies
                     </Link>
 
                     <Link

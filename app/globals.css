@@ -5,6 +5,7 @@
 /* Smooth transitions */
 html {
     transition: background-color 0.3s ease, color 0.3s ease;
+    overscroll-behavior: none;
 }
 #theme-transition div {
     will-change: width, height;
@@ -38,7 +39,7 @@ html {
 }
 @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-310%); }
 }
 
 .animate-marquee {
