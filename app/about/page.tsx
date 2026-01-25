@@ -74,6 +74,10 @@ export default function AboutPage() {
                         About Me
                     </h1>
 
+                    <p className="mt-3 text-xl text-gray-500 dark:text-gray-400">
+                        IT Specialist · Systems & Technology · Aspiring Developer
+                    </p>
+
                     <p className="mt-10 text-gray-700 dark:text-gray-300 leading-relaxed text-lg max-w-2xl">
                         Hi, I’m <span className="font-bold text-purple-900 dark:text-purple-400">Andrew</span>!
                         I like taking apart digital devices, figuring out how they work, and putting them back together without extra screws (most of the time).
@@ -96,9 +100,9 @@ export default function AboutPage() {
 
 
 
-                    <div className="mt-32">
+                    <div className="mt-48">
                         <p className="text-sm text-gray-400 text-center mb-4">
-                            Tools & Platforms I’ve Worked With
+                            Tools & Platforms I've Worked With
                         </p>
                     </div>
                         <CompanyCarousel />

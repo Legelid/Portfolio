@@ -20,14 +20,14 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center">
                     <div
                         className=" flex items-center
-                        justify-center w-14 h-14 md:w-24 md:h-18 rounded-xl
+                        justify-center w-16 h-16 md:w-28 md:h-20 rounded-xl
                         backdrop-blur transition-transform hover:scale-105"
                     >
                         <Image
                             src="/andrewlogo2.png"
                             alt="Andrew Collins Logo"
-                            width={70}
-                            height={70}
+                            width={80}
+                            height={80}
                             priority
                             className="object-contain"
                         />
@@ -35,7 +35,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Navigation Links */}
-                <div className="flex items-center gap-6 text-sm">
+                <div className="flex items-center gap-6 text-base">
 
                     <Link
                         href="/"

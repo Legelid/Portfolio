@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import {ChevronRight, ChevronLeft} from "lucide-react";
 
 const images = [
+    "/hero/andrew7.svg",
     "/hero/LeggyBig1.png",
     "/hero/img_1010.png",
-    "/hero/533089473_10229661582508279_6120591912680360637_n.jpg"
+    "/hero/533089473_10229661582508279_6120591912680360637_n.jpg",
 ];
 
 export default function HeroImageCarousel() {
@@ -23,7 +24,7 @@ export default function HeroImageCarousel() {
     };
 
     return (
-        <div className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 flex items-center justify-center">
+        <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-[272px] md:h-[272px] flex items-center justify-center">
 
             {/* Left Arrow */}
             <button
