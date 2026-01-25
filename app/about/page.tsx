@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDiscord } from "react-icons/fa";
+import Image from "next/image";
 import CompanyCarousel from "../../components/CompanyCarousel";
 import HeroImageCarousel from "@/components/HeroImageCarousel";
 
@@ -127,11 +128,12 @@ export default function AboutPage() {
                                            hover:bg-gray-100 dark:hover:bg-gray-800
                                            transition-colors"
                             >
-                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0">
-                                    <img
+                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0 relative">
+                                    <Image
                                         src="/network/adam-comer.png"
                                         alt="Adam Comer"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                                 <div className="text-left">
@@ -155,11 +157,12 @@ export default function AboutPage() {
                                            hover:bg-gray-100 dark:hover:bg-gray-800
                                            transition-colors"
                             >
-                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0">
-                                    <img
+                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0 relative">
+                                    <Image
                                         src="/network/dalton-mccleery.png"
                                         alt="Dalton McCleery"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        className="object-cover"
                                     />
                                 </div>
                                 <div className="text-left">
