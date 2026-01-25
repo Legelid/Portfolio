@@ -6,7 +6,7 @@ import Image from "next/image";
 const dailyTools = [
     { name: "Google Workspace", logo: "/logos/google.svg" },
     { name: "PowerSchool", logo: "/logos/powerschool.svg" },
-    { name: "Jamf", logo: "/logos/jamf.svg" }
+    { name: "Jamf", logo: "/logos/jamf.svg" },
     { name: "Proxmox", logo: "/logos/proxmox.svg" },
     { name: "Ubiquiti", logo: "/logos/ubiquiti.svg" },
     { name: "Grafana", logo: "/logos/Grafana.svg" },
