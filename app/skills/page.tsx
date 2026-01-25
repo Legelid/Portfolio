@@ -27,14 +27,14 @@ const devTools = [
 
 function SkillGrid({ title, skills }: { title: string; skills: { name: string; logo: string }[] }) {
     return (
-        <div className="mb-16 dark:text-white">
-            <h2 className="text-3xl text-center font-semibold mb-6 dark:text-white">{title}</h2>
+        <div className="mb-10 md:mb-16 dark:text-white">
+            <h2 className="text-2xl md:text-3xl text-center font-semibold mb-6 dark:text-white">{title}</h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 text-center">
                 {skills.map((skill) => (
                     <motion.div
                         key={skill.name}
-                        className="flex flex-col items-center justify-center p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
+                        className="flex flex-col items-center justify-center p-4 md:p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
                         whileHover={{ scale: 1.05 }}
                     >
                         <Image
@@ -42,9 +42,9 @@ function SkillGrid({ title, skills }: { title: string; skills: { name: string; l
                             alt={skill.name}
                             width={64}
                             height={64}
-                            className="mb-3 object-contain"
+                            className="mb-3 object-contain w-12 h-12 md:w-16 md:h-16"
                         />
-                        <span className="text-sm font-medium text-center">{skill.name}</span>
+                        <span className="text-xs md:text-sm font-medium text-center">{skill.name}</span>
                     </motion.div>
                 ))}
             </div>
@@ -54,16 +54,16 @@ function SkillGrid({ title, skills }: { title: string; skills: { name: string; l
 
 export default function SkillsPage() {
     return (
-        <section className="mx-auto max-w-6xl py-20 px-4">
+        <section className="mx-auto max-w-6xl py-12 md:py-20 px-4">
             <motion.h1
-                className="text-5xl font-bold mb-6 text-center dark:text-white"
+                className="text-3xl md:text-5xl font-bold mb-6 text-center dark:text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
                 Skills & Tools
             </motion.h1>
 
-            <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-20">
+            <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12 md:mb-20 text-sm md:text-base">
                 These are the tools, platforms, and technologies I use regularly and feel confident working with in real-world environments.
             </p>
 

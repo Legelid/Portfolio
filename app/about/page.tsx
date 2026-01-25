@@ -8,7 +8,7 @@ import HeroImageCarousel from "@/components/HeroImageCarousel";
 
 export default function AboutPage() {
     return (
-        <section className="py-40">
+        <section className="py-20 md:py-40 px-4 md:px-0">
             <div className="mx-auto max-w-5xl">
 
                 {/* Profile Section */}
@@ -70,28 +70,28 @@ export default function AboutPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.15 }}
                 >
-                    <h1 className="mt-10 text-5xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">
+                    <h1 className="mt-10 text-3xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">
                         About Me
                     </h1>
 
-                    <p className="mt-3 text-xl text-gray-500 dark:text-gray-400">
+                    <p className="mt-3 text-base md:text-xl text-gray-500 dark:text-gray-400">
                         IT Specialist · Systems & Technology · Aspiring Developer
                     </p>
 
-                    <p className="mt-10 text-gray-700 dark:text-gray-300 leading-relaxed text-lg max-w-2xl">
-                        Hi, I’m <span className="font-bold text-purple-900 dark:text-purple-400">Andrew</span>!
+                    <p className="mt-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg max-w-2xl">
+                        Hi, I'm <span className="font-bold text-purple-900 dark:text-purple-400">Andrew</span>!
                         I like taking apart digital devices, figuring out how they work, and putting them back together without extra screws (most of the time).
                     </p>
 
                     {/* Button */}
-                    <div className="mt-16">
+                    <div className="mt-10 md:mt-16">
                         <a
                             href="/projects"
                             className="
-                px-10 py-4 rounded-xl
+                px-6 py-3 md:px-10 md:py-4 rounded-xl
                 bg-purple-700 text-white hover:bg-purple-800
                 dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500
-                text-xl font-semibold shadow-lg transition-all
+                text-lg md:text-xl font-semibold shadow-lg transition-all
               "
                         >
                             View My Projects
@@ -100,12 +100,79 @@ export default function AboutPage() {
 
 
 
-                    <div className="mt-48">
+                    <div className="mt-24 md:mt-48">
                         <p className="text-sm text-gray-400 text-center mb-4">
                             Tools & Platforms I've Worked With
                         </p>
                     </div>
                         <CompanyCarousel />
+
+                    {/* Professional Network Section */}
+                    <div className="mt-16 md:mt-24">
+                        <p className="text-sm text-gray-400 text-center mb-4">
+                            Professional Network
+                        </p>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm text-center mb-6">
+                            Professionals I collaborate with, learn from, and trust.
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+                            {/* Adam Comer */}
+                            <a
+                                href="https://atccreative.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-5 p-6 rounded-xl
+                                           bg-gray-100/50 dark:bg-gray-800/50
+                                           border border-gray-200/50 dark:border-gray-700/50
+                                           hover:bg-gray-100 dark:hover:bg-gray-800
+                                           transition-colors"
+                            >
+                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0">
+                                    <img
+                                        src="/network/adam-comer.png"
+                                        alt="Adam Comer"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-gray-800 dark:text-gray-200 font-medium text-base">
+                                        Adam Comer
+                                    </p>
+                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                                        Graphic Designer
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* Dalton McCleery */}
+                            <a
+                                href="https://daltonmccleery.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-5 p-6 rounded-xl
+                                           bg-gray-100/50 dark:bg-gray-800/50
+                                           border border-gray-200/50 dark:border-gray-700/50
+                                           hover:bg-gray-100 dark:hover:bg-gray-800
+                                           transition-colors"
+                            >
+                                <div className="w-[72px] h-[72px] rounded-full overflow-hidden flex-shrink-0">
+                                    <img
+                                        src="/network/dalton-mccleery.png"
+                                        alt="Dalton McCleery"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-gray-800 dark:text-gray-200 font-medium text-base">
+                                        Dalton McCleery
+                                    </p>
+                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                                        Frontend Developer
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

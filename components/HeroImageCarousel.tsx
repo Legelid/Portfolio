@@ -31,15 +31,16 @@ export default function HeroImageCarousel() {
                 onClick={prevImage}
                 aria-label="Previous photo"
                 className="
-          absolute left-[-2.5rem]
-          p-2 rounded-full
+          absolute left-2 md:left-[-2.5rem]
+          p-1.5 md:p-2 rounded-full
           bg-white/70 dark:bg-black/60
           text-gray-800 dark:text-gray-100
           hover:scale-110 transition
           shadow-md
+          min-w-[44px] min-h-[44px] flex items-center justify-center
         "
             >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={18} className="md:w-5 md:h-5" />
             </button>
 
             {/* Image */}
@@ -59,15 +60,16 @@ export default function HeroImageCarousel() {
                 onClick={nextImage}
                 aria-label="Next photo"
                 className="
-          absolute right-[-2.5rem]
-          p-2 rounded-full
+          absolute right-2 md:right-[-2.5rem]
+          p-1.5 md:p-2 rounded-full
           bg-white/70 dark:bg-black/60
           text-gray-800 dark:text-gray-100
           hover:scale-110 transition
           shadow-md
+          min-w-[44px] min-h-[44px] flex items-center justify-center
         "
             >
-                <ChevronRight size={20} />
+                <ChevronRight size={18} className="md:w-5 md:h-5" />
             </button>
 
             {/* Optional subtle glow */}

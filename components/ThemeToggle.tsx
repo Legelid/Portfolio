@@ -4,13 +4,25 @@ import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
 
     useEffect(() => {
-        const saved = localStorage.getItem("theme") || "light";
+        const saved = localStorage.getItem("theme") || "dark";
         setTheme(saved);
         document.documentElement.classList.toggle("dark", saved === "dark");
+        // Update browser theme color
+        updateThemeColor(saved);
     }, []);
+
+    const updateThemeColor = (newTheme: string) => {
+        const metaThemeColor = document.getElementById("theme-color-meta") as HTMLMetaElement;
+        if (metaThemeColor) {
+            // Dark: blue-950 (#172554), Light: white
+            metaThemeColor.content = newTheme === "dark" ? "#172554" : "#ffffff";
+        }
+        // Also update html background for safe areas on iOS
+        document.documentElement.style.backgroundColor = newTheme === "dark" ? "#172554" : "#ffffff";
+    };
 
     const animateThemeChange = (event: any) => {
         const newTheme = theme === "light" ? "dark" : "light";
@@ -102,6 +114,7 @@ export default function ThemeToggle() {
             document.documentElement.classList.toggle("dark", newTheme === "dark");
             localStorage.setItem("theme", newTheme);
             setTheme(newTheme);
+            updateThemeColor(newTheme);
         }, 600);
 
         // Fade out ripples + restore content clarity

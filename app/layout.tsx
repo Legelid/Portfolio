@@ -6,11 +6,23 @@ import { Analytics } from "@vercel/analytics/next"
 export const metadata = {
     title: "My Portfolio",
     description: "My personal site built with Next.js and Tailwind CSS.",
+    viewport: {
+        width: "device-width",
+        initialScale: 1,
+        viewportFit: "cover",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="en" className="dark">
+        <head>
+            {/* Browser/status bar theme color - dark blue for dark mode default */}
+            <meta name="theme-color" content="#172554" id="theme-color-meta" />
+            {/* Apple specific - enables edge-to-edge and dark status bar */}
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        </head>
         <body className="min-h-screen flex flex-col relative">
         <Analytics />
 

@@ -2,11 +2,11 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 export default function ProjectsPage() {
     return (
-        <section className="mx-auto max-w-5xl py-16 dark:text-white text-center">
-            <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
+        <section className="mx-auto max-w-5xl py-10 md:py-16 px-4 md:px-0 dark:text-white text-center">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Projects</h1>
 
-            <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                A selection of the work I’ve done, showcasing my skills, creativity, and problem-solving ability.
+            <p className="mt-4 text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+                A selection of the work I've done, showcasing my skills, creativity, and problem-solving ability.
             </p>
 
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center dark:text-white">
