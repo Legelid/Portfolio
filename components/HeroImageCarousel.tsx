@@ -24,7 +24,7 @@ export default function HeroImageCarousel() {
     };
 
     return (
-        <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-[272px] md:h-[272px] flex items-center justify-center">
+        <div className="relative w-72 h-72 sm:w-[360px] sm:h-[360px] md:w-[408px] md:h-[408px] flex items-center justify-center">
 
             {/* Left Arrow */}
             <button
