@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import CompanyCarousel from "../../components/CompanyCarousel";
 import HeroImageCarousel from "@/components/HeroImageCarousel";
@@ -37,14 +37,6 @@ export default function AboutPage() {
                             className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-500 transition-colors text-2xl"
                         >
                             <FaGithub />
-                        </a>
-
-                        <a
-                            href="https://discord.gg/Wqnkpg6gSr"
-                            target="_blank"
-                            className="text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-gray-500 transition-colors text-2xl"
-                        >
-                            <FaDiscord />
                         </a>
 
                         <a
@@ -110,7 +102,7 @@ export default function AboutPage() {
 
                     {/* Professional Network Section */}
                     <div className="mt-16 md:mt-24">
-                        <p className="text-sm text-gray-400 text-center mb-4">
+                        <p className="text-sm font-bold text-white text-center mb-4">
                             Professional Network
                         </p>
                         <p className="text-gray-500 dark:text-gray-400 text-sm text-center mb-6">
