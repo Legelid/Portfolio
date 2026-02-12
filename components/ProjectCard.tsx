@@ -7,29 +7,38 @@ import ImageLightbox from "./ImageLightbox";
 type ProjectCardProps = {
     title: string;
     description: string;
-    image?: string; // optional image
+    image?: string; // single image (backward compatible)
+    images?: string[]; // multiple images (new feature)
 };
 
-export function ProjectCard({ title, description, image }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, images }: ProjectCardProps) {
     const [open, setOpen] = useState(false);
+
+    const hasImages = images && images.length > 0;
+    const displayImage = hasImages ? images[0] : image;
 
     return (
         <>
             <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm flex flex-col">
 
-                {/* Project Image */}
-                {image && (
+                {/* Project Image - Single thumbnail for all cases */}
+                {displayImage && (
                     <button
                         onClick={() => setOpen(true)}
-                        className="mb-4 rounded-lg overflow-hidden group"
+                        className="mb-4 rounded-lg overflow-hidden group relative aspect-video"
                     >
                         <Image
-                            src={image}
+                            src={displayImage}
                             alt={`${title} screenshot`}
-                            width={800}
-                            height={450}
+                            fill
                             className="object-cover rounded-lg transition-transform group-hover:scale-105"
                         />
+                        {/* Badge showing image count for multi-image projects */}
+                        {hasImages && images.length > 1 && (
+                            <div className="absolute top-2 right-2 px-2 py-1 rounded-md bg-black/60 text-white text-xs font-medium">
+                                {images.length} photos
+                            </div>
+                        )}
                     </button>
                 )}
 
@@ -43,9 +52,11 @@ export function ProjectCard({ title, description, image }: ProjectCardProps) {
             </div>
 
             {/* Lightbox */}
-            {open && image && (
+            {open && (
                 <ImageLightbox
-                    src={image}
+                    images={hasImages ? images : undefined}
+                    src={!hasImages ? image : undefined}
+                    initialIndex={0}
                     alt={`${title} full view`}
                     onClose={() => setOpen(false)}
                 />

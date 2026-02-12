@@ -11,6 +11,19 @@ export default function ProjectsPage() {
 
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center dark:text-white">
                 <ProjectCard
+                    title="First-I-Did"
+                    description="Location based reminders app built with SwiftUI and Xcode."
+                    images={[
+                        "/projects/first-i-did/screenshot-1.png",
+                        "/projects/first-i-did/screenshot-2.png",
+                        "/projects/first-i-did/screenshot-3.png",
+                        "/projects/first-i-did/screenshot-4.png",
+                        "/projects/first-i-did/screenshot-5.png",
+                        "/projects/first-i-did/screenshot-6.png",
+                    ]}
+                />
+
+                <ProjectCard
                     title="NCSC Asset Manager"
                     description="Asset Manager project for Nettle Creek Community Schools. With account creation and login abilities."
                     image="/projects/Asset1.png"
