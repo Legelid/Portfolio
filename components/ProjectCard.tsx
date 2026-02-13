@@ -9,9 +9,10 @@ type ProjectCardProps = {
     description: string;
     image?: string; // single image (backward compatible)
     images?: string[]; // multiple images (new feature)
+    techStack?: string[]; // tech stack pill badges
 };
 
-export function ProjectCard({ title, description, image, images }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, images, techStack }: ProjectCardProps) {
     const [open, setOpen] = useState(false);
 
     const hasImages = images && images.length > 0;
@@ -49,6 +50,23 @@ export function ProjectCard({ title, description, image, images }: ProjectCardPr
                 <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {description}
                 </p>
+
+                {/* Tech Stack Pills */}
+                {techStack && techStack.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                        {techStack.map((tech) => (
+                            <span
+                                key={tech}
+                                className="px-3 py-1 text-xs font-medium rounded-full
+                                           bg-purple-100 text-purple-700
+                                           dark:bg-purple-900/30 dark:text-purple-300
+                                           border border-purple-200 dark:border-purple-800"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {/* Lightbox */}

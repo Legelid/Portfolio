@@ -1,19 +1,13 @@
 "use client";
 
 const companies = [
-    { name: "PowerSchool", img: "/logos/powerschool.svg", link: "https://www.powerschool.com/" },
-    { name: "Google", img: "/logos/google.svg", link: "https://www.google.com/" },
-    { name: "Rhombus", img: "/logos/rhombus.jpeg", link: "https://www.rhombussystems.com/" },
-    { name: "Ubiquiti", img: "/logos/ubiquiti.svg", link: "https://ui.com/" },
-    { name: "Proxmox", img: "/logos/proxmox.svg", link: "https://www.proxmox.com/" },
-    { name: "GitHub", img: "logos/github.svg", link: "https://github.com/"},
-    { name: "Docker", img: "/logos/Docker.svg", link: "https://www.docker.com/" },
-    { name: "Grafana", img: "/logos/Grafana.svg", link: "https://www.grafana.com/" },
     { name: "Laravel", img: "/logos/Laravel.svg", link: "https://laravel.com/" },
-    { name: "Tailwind CSS", img: "/logos/tailwind.svg", link:"https//www.tailwind.com/"},
-    { name: "Jamf", img: "/logos/jamf.svg", link: "https://www.jamf.com/"},
+    { name: "Docker", img: "/logos/Docker.svg", link: "https://www.docker.com/" },
+    { name: "GitHub", img: "/logos/github.svg", link: "https://github.com/" },
+    { name: "Tailwind CSS", img: "/logos/tailwind.svg", link: "https://tailwindcss.com/" },
     { name: "Linux", img: "/logos/Linux.svg" },
-
+    { name: "Grafana", img: "/logos/Grafana.svg", link: "https://www.grafana.com/" },
+    { name: "Google", img: "/logos/google.svg", link: "https://www.google.com/" },
 ];
 
 export default function CompanyCarousel() {

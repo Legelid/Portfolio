@@ -11,8 +11,16 @@ export default function ProjectsPage() {
 
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center dark:text-white">
                 <ProjectCard
-                    title="First-I-Did"
-                    description="Location based reminders app built with SwiftUI and Xcode."
+                    title="PTO Management System"
+                    description="Managing employee time-off manually means spreadsheets, missed requests, and no visibility into team availability. I built a full stack system that handles the entire workflow — request submission, manager approval, balance tracking, and reporting — in one place."
+                    techStack={["PHP", "Laravel", "Filament", "MySQL", "Tailwind CSS"]}
+                    image="/projects/pto-system.png"
+                />
+
+                <ProjectCard
+                    title="Last I Did"
+                    description="'When did I last change the car oil?' or 'How long since I called my mom?' are questions with no easy answer. Last I Did is a lightweight iOS app for logging recurring personal tasks so you always know when you last did something - and when it's probably time to do it again."
+                    techStack={["Swift", "SwiftUI", "iOS", "Core Data"]}
                     images={[
                         "/projects/first-i-did/screenshot-1.png",
                         "/projects/first-i-did/screenshot-2.png",
@@ -26,12 +34,14 @@ export default function ProjectsPage() {
                 <ProjectCard
                     title="NCSC Asset Manager"
                     description="Asset Manager project for Nettle Creek Community Schools. With account creation and login abilities."
+                    techStack={["PHP", "MySQL", "Bootstrap"]}
                     image="/projects/Asset1.png"
                 />
 
                 <ProjectCard
                     title="UniFi Analytics Dashboard"
                     description="Project my employer at NCSC asked to be created to manage data analytics in one place for their network and tools. *Parts of the image are blurred due to privacy."
+                    techStack={["Grafana", "Docker", "Prometheus"]}
                     image="/projects/Grafana1.jpeg"
                 />
             </div>

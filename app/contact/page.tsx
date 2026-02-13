@@ -1,108 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function ContactPage() {
-    const contactCards = [
-        {
-            icon: FaLinkedin,
-            linkText: "Message me on LinkedIn",
-            href: "https://www.linkedin.com/in/andrew-collins-528117137/",
-            isPrimary: true,
-        },
-        {
-            icon: FaEnvelope,
-            linkText: "Send an email",
-            href: "mailto:andrewcollins0910@gmail.com",
-            isPrimary: false,
-        },
-        {
-            icon: FaGithub,
-            linkText: "View GitHub",
-            href: "https://github.com/Legelid",
-            isPrimary: false,
-        },
-    ];
-
     return (
-        <section className="mx-auto max-w-4xl py-12 md:py-20 px-4">
-
-            {/* Page Header */}
-            <motion.h1
-                className="text-3xl md:text-5xl font-bold tracking-tight text-center dark:text-white text-black"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                Contact Me
-            </motion.h1>
-
-            <motion.p
-                className="mt-4 text-center dark:text-gray-300 text-gray-600 max-w-2xl mx-auto text-sm md:text-base"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.1 }}
-            >
-                I'm open to opportunities, roles, and professional conversations. The best ways to reach me are below.
-            </motion.p>
-
-            {/* Contact Cards */}
+        <section className="mx-auto max-w-3xl py-20 md:py-40 px-4">
             <motion.div
-                className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6"
+                className="flex flex-col items-center text-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                {contactCards.map((card, index) => (
+                {/* Heading */}
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    Let's Work Together
+                </h1>
+
+                {/* Subtext */}
+                <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-xl leading-relaxed">
+                    I'm currently looking for full stack developer roles with a focus
+                    on PHP and Laravel. Open to full-time positions and contract work,
+                    remote or in the Indianapolis, IN area.
+                </p>
+
+                <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-xl leading-relaxed">
+                    The best way to reach me:
+                </p>
+
+                {/* Contact Links */}
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
+
+                    {/* LinkedIn */}
                     <a
-                        key={index}
-                        href={card.href}
-                        target={card.href.startsWith("mailto:") ? undefined : "_blank"}
-                        rel={card.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                        className={`
-                            group flex flex-col items-center text-center p-6 rounded-xl
-                            border transition-all duration-300
-                            ${card.isPrimary
-                                ? "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700/50 hover:border-purple-400 dark:hover:border-purple-500"
-                                : "bg-gray-50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700/50 hover:border-gray-300 dark:hover:border-gray-600"
-                            }
-                            hover:shadow-lg hover:-translate-y-1
-                        `}
+                        href="https://www.linkedin.com/in/andrew-collins-528117137/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 px-6 py-4 rounded-xl
+                                   bg-purple-700 text-white hover:bg-purple-800
+                                   dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500
+                                   font-semibold text-base shadow-lg transition-all"
                     >
-                        <card.icon
-                            className={`text-4xl mb-4 transition-colors ${
-                                card.isPrimary
-                                    ? "text-purple-600 dark:text-purple-400"
-                                    : "text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400"
-                            }`}
-                        />
-                        <span
-                            className={`font-medium transition-colors ${
-                                card.isPrimary
-                                    ? "text-purple-700 dark:text-purple-300"
-                                    : "text-gray-700 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-300"
-                            }`}
-                        >
-                            {card.linkText}
-                        </span>
+                        <FaLinkedin className="text-xl" />
+                        Connect on LinkedIn
                     </a>
-                ))}
-            </motion.div>
 
-            {/* What I'm Open To Section */}
-            <motion.div
-                className="mt-12 md:mt-16 text-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-            >
-                <p className="text-sm text-gray-400 dark:text-gray-500 mb-2">
-                    What I'm Open To
+                    {/* Email */}
+                    <a
+                        href="mailto:andrewcollins0910@gmail.com"
+                        className="flex items-center gap-3 px-6 py-4 rounded-xl
+                                   border-2 border-purple-700 text-purple-700 hover:bg-purple-50
+                                   dark:border-yellow-400 dark:text-yellow-400 dark:hover:bg-yellow-400/10
+                                   font-semibold text-base transition-all"
+                    >
+                        <FaEnvelope className="text-xl" />
+                        andrewcollins0910@gmail.com
+                    </a>
+                </div>
+
+                {/* Response time */}
+                <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
+                    I respond within 24 hours.
                 </p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base">
-                    Currently open to: Junior Developer roles · IT / Systems roles · Hybrid positions.
-                </p>
+
             </motion.div>
         </section>
     );

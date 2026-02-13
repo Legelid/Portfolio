@@ -3,29 +3,51 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const dailyTools = [
-    { name: "Google Workspace", logo: "/logos/google.svg" },
-    { name: "PowerSchool", logo: "/logos/powerschool.svg" },
-    { name: "Jamf", logo: "/logos/jamf.svg" },
-    { name: "Proxmox", logo: "/logos/proxmox.svg" },
-    { name: "Ubiquiti", logo: "/logos/ubiquiti.svg" },
-    { name: "Grafana", logo: "/logos/Grafana.svg" },
-    { name: "Rhombus", logo: "/logos/rhombus.jpeg" },
-    { name: "ChatGPT", logo: "/logos/Chatgpt.svg" },
-];
 
 const devTools = [
-    { name: "React", logo: "/logos/React-icon.svg" },
-    { name: "Next.js", logo: "/logos/nextjs.svg" },
-    { name: "TypeScript", logo: "/logos/Typescript.svg" },
-    { name: "Tailwind CSS", logo: "/logos/tailwind.svg" },
-    { name: "GitHub", logo: "/logos/github.svg"},
-    { name: "Laravel", logo: "/logos/Laravel.svg" },
-    { name: "Docker", logo: "/logos/Docker.svg" },
-    { name: "Linux", logo: "/logos/Linux.svg" },
+    {
+        name: "React",
+        logo: "/logos/React-icon.svg",
+        desc: "Built interactive UIs and component-based front ends"
+    },
+    {
+        name: "Next.js",
+        logo: "/logos/nextjs.svg",
+        desc: "Primary framework for full stack web apps, including this site"
+    },
+    {
+        name: "TypeScript",
+        logo: "/logos/Typescript.svg",
+        desc: "Type-safe development across front end and back end projects"
+    },
+    {
+        name: "Tailwind CSS",
+        logo: "/logos/tailwind.svg",
+        desc: "Utility-first styling for responsive, consistent UI design"
+    },
+    {
+        name: "GitHub",
+        logo: "/logos/github.svg",
+        desc: "Version control, collaboration, and project management"
+    },
+    {
+        name: "Laravel",
+        logo: "/logos/Laravel.svg",
+        desc: "Primary back end framework for full stack PHP applications"
+    },
+    {
+        name: "Docker",
+        logo: "/logos/Docker.svg",
+        desc: "Containerised local dev environments and deployments"
+    },
+    {
+        name: "Linux",
+        logo: "/logos/Linux.svg",
+        desc: "Daily driver for development and server administration"
+    },
 ];
 
-function SkillGrid({ title, skills }: { title: string; skills: { name: string; logo: string }[] }) {
+function SkillGrid({ title, skills }: { title: string; skills: { name: string; logo: string; desc: string }[] }) {
     return (
         <div className="mb-10 md:mb-16 dark:text-white">
             <h2 className="text-2xl md:text-3xl text-center font-semibold mb-6 dark:text-white">{title}</h2>
@@ -45,6 +67,9 @@ function SkillGrid({ title, skills }: { title: string; skills: { name: string; l
                             className="mb-3 object-contain w-12 h-12 md:w-16 md:h-16"
                         />
                         <span className="text-xs md:text-sm font-medium text-center">{skill.name}</span>
+                        <span className="mt-2 text-xs text-gray-500 dark:text-gray-400 text-center leading-snug">
+                            {skill.desc}
+                        </span>
                     </motion.div>
                 ))}
             </div>
@@ -64,12 +89,11 @@ export default function SkillsPage() {
             </motion.h1>
 
             <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12 md:mb-20 text-sm md:text-base">
-                These are the tools, platforms, and technologies I use regularly and feel confident working with in real-world environments.
+                The development tools and technologies I use regularly to build full stack applications.
             </p>
 
 
             <SkillGrid title="Development & Tech" skills={devTools} />
-            <SkillGrid title="Daily Tools & Platforms" skills={dailyTools} />
         </section>
     );
 }
