@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
-import HomepageProjectCard from "../../components/HomepageProjectCard";
+import HomepageProjectCard from "@/components/HomepageProjectCard";
 
 export default function AboutPage() {
     return (
