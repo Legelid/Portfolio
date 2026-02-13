@@ -213,7 +213,7 @@ export default function AboutPage() {
                                         Dalton McCleery
                                     </p>
                                     <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Frontend Developer
+                                        Senior Software Engineer
                                     </p>
                                 </div>
                             </a>
