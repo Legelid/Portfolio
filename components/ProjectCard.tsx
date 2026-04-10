@@ -7,12 +7,13 @@ import Image from "next/image";
 interface ProjectCardProps {
     title: string;
     description: string;
-    image: string;
+    image?: string;
+    images?: string[];
     techStack: string[];
-    problem: string;
-    solution: string;
-    technicalDecisions: string[];
-    outcome: string;
+    problem?: string;
+    solution?: string;
+    technicalDecisions?: string[];
+    outcome?: string;
     githubUrl?: string;
     liveUrl?: string;
 }
@@ -21,6 +22,7 @@ export function ProjectCard({
     title,
     description,
     image,
+    images,
     techStack,
     problem,
     solution,
@@ -30,6 +32,7 @@ export function ProjectCard({
     liveUrl,
 }: ProjectCardProps) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const thumbnail = image ?? images?.[0];
 
     return (
         <motion.div
@@ -38,14 +41,16 @@ export function ProjectCard({
             onClick={() => setIsExpanded(!isExpanded)}
         >
             {/* Thumbnail */}
-            <div className="relative aspect-video">
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    className="object-cover"
-                />
-            </div>
+            {thumbnail && (
+                <div className="relative aspect-video">
+                    <Image
+                        src={thumbnail}
+                        alt={title}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            )}
 
             <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -97,29 +102,37 @@ export function ProjectCard({
                         >
                             <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-800 space-y-6">
 
-                                <div>
-                                    <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">The Problem</h4>
-                                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{problem}</p>
-                                </div>
+                                {problem && (
+                                    <div>
+                                        <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">The Problem</h4>
+                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{problem}</p>
+                                    </div>
+                                )}
 
-                                <div>
-                                    <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">The Solution</h4>
-                                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{solution}</p>
-                                </div>
+                                {solution && (
+                                    <div>
+                                        <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">The Solution</h4>
+                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{solution}</p>
+                                    </div>
+                                )}
 
-                                <div>
-                                    <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">Technical Decisions</h4>
-                                    <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 text-sm">
-                                        {technicalDecisions.map((d, i) => (
-                                            <li key={i}>{d}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                {technicalDecisions && technicalDecisions.length > 0 && (
+                                    <div>
+                                        <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">Technical Decisions</h4>
+                                        <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 text-sm">
+                                            {technicalDecisions.map((d, i) => (
+                                                <li key={i}>{d}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
 
-                                <div>
-                                    <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">Outcome</h4>
-                                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{outcome}</p>
-                                </div>
+                                {outcome && (
+                                    <div>
+                                        <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">Outcome</h4>
+                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{outcome}</p>
+                                    </div>
+                                )}
 
                                 <div className="flex flex-wrap gap-3 pt-2">
                                     {githubUrl && (
