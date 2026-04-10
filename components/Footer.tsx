@@ -3,8 +3,8 @@ import { Sparkles } from "lucide-react";
 
 export function Footer() {
     return (
-        <footer className="border-t border-yellow-300 bg-yellow-300 dark:border-black dark:bg-black mt-20 py-10 text-center text-sm text-black dark:text-white ">
-            © {new Date().getFullYear()} TheBois. All rights reserved.
+        <footer className="border-t border-gray-100 bg-gray-50 dark:border-gray-900 dark:bg-gray-950 py-6 text-center text-sm text-gray-400 dark:text-gray-600">
+            © {new Date().getFullYear()} Andrew Collins. All rights reserved.
             <div className="flex justify-center mt-4">
                 <Link
                     href="/hobbies"

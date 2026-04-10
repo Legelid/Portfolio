@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaFileDownload } from "react-icons/fa";
 
 export default function ContactPage() {
     return (
@@ -37,8 +37,8 @@ export default function ContactPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 px-6 py-4 rounded-xl
-                                   bg-purple-700 text-white hover:bg-purple-800
-                                   dark:bg-yellow-400 dark:text-black dark:hover:bg-yellow-500
+                                   bg-blue-600 text-white hover:bg-blue-700
+                                   dark:bg-blue-500 dark:text-white dark:hover:bg-blue-400
                                    font-semibold text-base shadow-lg transition-all"
                     >
                         <FaLinkedin className="text-xl" />
@@ -47,14 +47,27 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <a
-                        href="mailto:andrewcollins0910@gmail.com"
+                        href="mailto:andrewrcollins@live.com"
                         className="flex items-center gap-3 px-6 py-4 rounded-xl
-                                   border-2 border-purple-700 text-purple-700 hover:bg-purple-50
-                                   dark:border-yellow-400 dark:text-yellow-400 dark:hover:bg-yellow-400/10
+                                   border-2 border-blue-600 text-blue-600 hover:bg-blue-50
+                                   dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-500/10
                                    font-semibold text-base transition-all"
                     >
                         <FaEnvelope className="text-xl" />
-                        andrewcollins0910@gmail.com
+                        andrewrcollins@live.com
+                    </a>
+
+                    {/* Resume */}
+                    <a
+                        href="/resume/Andrew_Collins_Resume.pdf"
+                        download="Andrew_Collins_Resume.pdf"
+                        className="flex items-center gap-3 px-6 py-4 rounded-xl
+                                   border-2 border-blue-600 text-blue-600 hover:bg-blue-50
+                                   dark:border-blue-500 dark:text-blue-500 dark:hover:bg-blue-500/10
+                                   font-semibold text-base transition-all"
+                    >
+                        <FaFileDownload className="text-xl" />
+                        Download Resume
                     </a>
                 </div>
 

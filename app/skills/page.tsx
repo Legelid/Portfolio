@@ -89,7 +89,7 @@ export default function SkillsPage() {
             </motion.h1>
 
             <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12 md:mb-20 text-sm md:text-base">
-                The development tools and technologies I use regularly to build full stack applications.
+                I focus on PHP/Laravel backends with React/Next.js frontends — and the infrastructure underneath.
             </p>
 
 

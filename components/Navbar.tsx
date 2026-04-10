@@ -15,22 +15,12 @@ export default function Navbar() {
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/skills", label: "Skills" },
-        { href: "/experience", label: "Experience" },
         { href: "/contact", label: "Contact" },
     ];
 
     return (
         <>
-            <header
-                className="
-                border-b
-                bg-white/80 backdrop-blur
-                border-gray-200
-                dark:bg-blue-950/80 dark:border-blue-950
-                transition-colors
-                relative z-50
-            "
-            >
+            <header className="bg-transparent transition-colors relative z-50">
                 <nav className="mx-auto flex max-w-10xl items-center justify-between p-4">
 
                     {/* Branding / Logo */}
@@ -57,7 +47,7 @@ export default function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-300 transition-colors"
+                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                             >
                                 {link.label}
                             </Link>
@@ -122,7 +112,7 @@ export default function Navbar() {
                                         href={link.href}
                                         onClick={closeMenu}
                                         className="block py-3 px-8 text-2xl font-semibold text-gray-900 dark:text-white
-                                                   hover:text-purple-600 dark:hover:text-purple-400
+                                                   hover:text-blue-600 dark:hover:text-blue-400
                                                    transition-colors"
                                     >
                                         {link.label}

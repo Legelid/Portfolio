@@ -27,13 +27,13 @@ export default function HomepageProjectCard({ title, tagline, description, tags,
             <div className="flex gap-4 mt-auto pt-2">
                 {githubUrl && (
                     <Link href={githubUrl} target="_blank" rel="noopener noreferrer"
-                        className="text-sm font-medium text-purple-700 dark:text-yellow-400 hover:underline underline-offset-4 transition-colors">
+                        className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 transition-colors">
                         View on GitHub →
                     </Link>
                 )}
                 {demoUrl && (
                     <Link href={demoUrl} target="_blank" rel="noopener noreferrer"
-                        className="text-sm font-medium text-purple-700 dark:text-yellow-400 hover:underline underline-offset-4 transition-colors">
+                        className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 transition-colors">
                         Live Demo →
                     </Link>
                 )}

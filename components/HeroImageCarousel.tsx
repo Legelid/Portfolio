@@ -73,7 +73,7 @@ export default function HeroImageCarousel() {
             </button>
 
             {/* Optional subtle glow */}
-            <div className="absolute -inset-4 rounded-full bg-purple-400/20 dark:bg-purple-600/20 blur-2xl -z-10" />
+            <div className="absolute -inset-4 rounded-full bg-blue-400/10 dark:bg-blue-600/10 blur-2xl -z-10" />
         </div>
     );
 }

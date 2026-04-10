@@ -1,15 +1,26 @@
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import { Footer } from "../components/Footer";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-    title: "My Portfolio",
-    description: "My personal site built with Next.js and Tailwind CSS.",
+    title: "Andrew Collins — Full Stack Developer",
+    description: "Full stack developer specializing in PHP, Laravel, and JavaScript. Available for hire in Indianapolis, IN and remote.",
     viewport: {
         width: "device-width",
         initialScale: 1,
         viewportFit: "cover",
+    },
+    openGraph: {
+        title: "Andrew Collins — Full Stack Developer",
+        description: "Full stack developer specializing in PHP, Laravel, and JavaScript",
+        url: "https://www.andrewrobertcollins.com",
+        siteName: "Andrew Collins",
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary",
+        title: "Andrew Collins — Full Stack Developer",
+        description: "Full stack developer specializing in PHP, Laravel, and JavaScript",
     },
 };
 
@@ -22,6 +33,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Apple specific - enables edge-to-edge and dark status bar */}
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        name: "Andrew Collins",
+                        jobTitle: "Full Stack Developer",
+                        url: "https://www.andrewrobertcollins.com",
+                        sameAs: [
+                            "https://www.linkedin.com/in/andrew-collins-528117137/",
+                            "https://github.com/Legelid",
+                        ],
+                        knowsAbout: ["PHP", "Laravel", "JavaScript", "React", "Next.js"],
+                    }),
+                }}
+            />
         </head>
         <body className="min-h-screen flex flex-col relative">
         <Analytics />
@@ -31,8 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* BACKGROUND GRADIENT */}
         <div
-            className="fixed inset-0 -z-10 bg-gradient-to-b from-white to-yellow-300
-                               dark:bg-gradient-to-b dark:from-blue-950 dark:to-black"
+            className="fixed inset-0 -z-10 bg-gray-50 dark:bg-gray-950"
         />
 
         {/* PAGE WRAPPER (holds both theme layers) */}
@@ -40,9 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* CURRENT THEME LAYER */}
             <div id="theme-layer" className="absolute inset-0 z-10 flex flex-col">
-                <Navbar />
                 <main className="flex-grow">{children}</main>
-                <Footer />
             </div>
 
             {/* NEXT THEME LAYER (revealed during ripple animation) */}
@@ -50,9 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 id="theme-layer-next"
                 className="absolute inset-0 z-0 pointer-events-none opacity-0 transition-opacity duration-300"
             >
-                <Navbar />
                 <main className="flex-grow">{children}</main>
-                <Footer />
             </div>
         </div>
 
