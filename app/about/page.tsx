@@ -28,12 +28,12 @@ export default function AboutPage() {
                     {/* Layered name effect */}
                     <div className="relative mb-8">
                         {/* Background — "COLLINS" massive + semi-transparent */}
-                        <h1 className="text-[10rem] md:text-[18rem] lg:text-[21rem] font-bold text-gray-900 dark:text-white opacity-20 leading-none uppercase tracking-tight select-none">
+                        <h1 className="text-[6rem] sm:text-[10rem] md:text-[15rem] lg:text-[21rem] font-bold text-gray-900 dark:text-white opacity-20 leading-none uppercase tracking-tight select-none">
                             Collins
                         </h1>
                         {/* Foreground — "Andrew" anchored to bottom-left of "COLLINS" */}
                         <div className="absolute bottom-0 left-0 md:left-12 lg:left-16">
-                            <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-gray-900 dark:text-white leading-none">
+                            <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-gray-900 dark:text-white leading-none">
                                 Andrew
                             </h2>
                         </div>
