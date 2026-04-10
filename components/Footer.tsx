@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <footer className="border-t border-gray-100 bg-gray-50 dark:border-gray-900 dark:bg-gray-950 py-6 text-center text-sm text-gray-400 dark:text-gray-600">
             © {new Date().getFullYear()} Andrew Collins. All rights reserved.
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center  mt-4">
                 <Link
                     href="/hobbies"
                     aria-label="Personal interests"
