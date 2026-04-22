@@ -112,7 +112,6 @@ export default function AboutPage() {
                                 "Livewire for reactive UI without heavy JavaScript overhead",
                                 "Tailwind CSS for consistent, maintainable styling",
                             ]}
-                            outcome="Deployed internally at Nettle Creek School Corporation for 50+ staff members. Reduced PTO approval time from 2–3 days to same-day. Eliminated spreadsheet errors and gave managers real-time visibility into team availability."
                             githubUrl="https://github.com/Legelid/PTO-Management"
                         />
                         <ProjectCard
@@ -127,7 +126,6 @@ export default function AboutPage() {
                                 "CoreData for local persistence (no cloud dependencies)",
                                 "Native iOS patterns for a familiar user experience",
                             ]}
-                            outcome="Shipped as an open-source project demonstrating mobile development skills beyond web. Built to solve a real personal problem, not just as a portfolio piece."
                             githubUrl="https://github.com/Legelid/Last-I-did"
                         />
                     </div>
